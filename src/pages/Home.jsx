@@ -9,8 +9,7 @@ import Contact from "./Contact.jsx";
 
 function Home() {
   return (
-    <div className="w-full h-screen">
-      <Navbar />
+    <div className="w-full min-h-screen ">
       <Hero />
       <About />
       <Projects />

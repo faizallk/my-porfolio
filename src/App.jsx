@@ -7,6 +7,7 @@ import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
+import MainLayout from "./Layouts/MainLayout";
 import ClickSpark from "../ReactBits/ClickSpark/ClickSpark.jsx";
 function App() {
   // App.jsx or SmoothScroll.jsx
@@ -39,11 +40,13 @@ function App() {
       <SmoothScroll />
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
+        </Route>
       </Routes>
     </div>
   );
